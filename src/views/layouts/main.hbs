@@ -4,6 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Server-First Web Components with DSD and HTMX</title>
+    <script>
+      const lookup = new Map();
+
+      class SharedStyle extends HTMLElement {
+        connectedCallback() {
+          const id = this.getAttribute("style-id");
+          const root = this.getRootNode();
+          let styles = lookup.get(id);
+
+          if (styles) {
+            root.adoptedStyleSheets.push(styles);
+          } else {
+            styles = new CSSStyleSheet();
+            const element = root.getElementById(id);
+            styles.replaceSync(element.innerHTML);
+            lookup.set(id, styles);
+          }
+
+          this.remove();
+        }
+      }
+
+      customElements.define("shared-styles", SharedStyle);
+    </script>
   </head>
   <body>
     {{{body}}}
