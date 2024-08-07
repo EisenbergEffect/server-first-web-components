@@ -2,7 +2,7 @@
   "name": "server-first-web-components",
   "private": true,
   "version": "1.0.0",
-  "description": "A demo app showing server-first web components in action.",
+  "description": "A demo app showing server-first web components with HTMX.",
   "main": "server/index.js",
   "type": "module",
   "scripts": {
