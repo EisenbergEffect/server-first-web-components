@@ -3,10 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "description": "A demo app showing server-first web components in action.",
-  "main": "src/index.js",
+  "main": "server/index.js",
   "type": "module",
   "scripts": {
-    "server": "node ./src/server.js"
+    "server": "node ./server/index.js"
   },
   "repository": {
     "type": "git",

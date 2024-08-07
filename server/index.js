@@ -1,16 +1,15 @@
 import express from "express";
-import { AsyncLocalStorage } from "async_hooks";
 import { configureHandlebars } from "./handlebars.js";
+import { runWithNewContext } from "./context.js";
 
 const port = 3000;
 const app = express();
-const als = new AsyncLocalStorage();
 
-configureHandlebars(app, als);
-app.use(express.static("src/public"));
+configureHandlebars(app);
+app.use(express.static("client"));
 
 app.get("/", (req, res) => {
-  als.run(new Map(), () => res.render("home"));
+  runWithNewContext(() => res.render("home"));
 });
 
 app.listen(port, () => console.log(`App listening on port ${port}`));
