@@ -7,6 +7,7 @@ const app = express();
 const als = new AsyncLocalStorage();
 
 configureHandlebars(app, als);
+app.use(express.static("src/public"));
 
 app.get("/", (req, res) => {
   als.run(new Map(), () => res.render("home"));

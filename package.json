@@ -6,7 +6,7 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "serve": "node ./src/index.js"
+    "server": "node ./src/server.js"
   },
   "repository": {
     "type": "git",
