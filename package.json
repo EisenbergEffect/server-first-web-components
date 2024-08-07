@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/EisenbergEffect/server-first-web-components#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.3"
   }
 }
