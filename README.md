@@ -12,3 +12,14 @@
 
 1. On the command line, execute `npm run server` to run the web server.
 2. Visit http://localhost:3000/ in a browser to view the app.
+
+## Dependencies
+
+### Server
+
+* [Express](https://expressjs.com/)
+* [Handlebars](https://handlebarsjs.com/) and [Express Handlebars](https://www.npmjs.com/package/express-handlebars)
+
+### Client
+
+* [HTMX](https://htmx.org/)
