@@ -2,10 +2,5 @@ import { AsyncLocalStorage } from "async_hooks";
 
 const als = new AsyncLocalStorage();
 
-export function getCurrentContext() {
-  return als.getStore();
-}
-
-export function runWithNewContext(callback) {
-  return als.run(new Map(), callback);
-}
+export const getCurrentContext = () => als.getStore();
+export const runInNewContext = (callback) => als.run(new Map(), callback);
