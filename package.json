@@ -1,0 +1,24 @@
+{
+  "name": "server-first-web-components",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A demo app showing server-first web components in action.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "serve": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EisenbergEffect/server-first-web-components.git"
+  },
+  "author": "EisenbergEffect",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EisenbergEffect/server-first-web-components/issues"
+  },
+  "homepage": "https://github.com/EisenbergEffect/server-first-web-components#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
