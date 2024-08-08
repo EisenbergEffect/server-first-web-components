@@ -1,5 +1,7 @@
 import filmSummaries from "./data/film-summaries.js";
 
+const isHTMXRequest = (req) => !!req.get("HX-Request");
+
 const routes = {
   "/": (req, res) => {
     const selectedFilm = filmSummaries[0];
@@ -10,9 +12,14 @@ const routes = {
 
   "/films/:id": (req, res) => {
     const selectedFilm = filmSummaries.find(x => x.id == req.params.id);
-    const viewModel = { filmSummaries, selectedFilm };
 
-    res.render("film-list", viewModel);
+    if (isHTMXRequest(req)) {
+      const viewModel = { selectedFilm, layout: false };
+      res.render("partials/film-detail", viewModel);
+    } else {
+      const viewModel = { filmSummaries, selectedFilm };
+      res.render("film-list", viewModel);
+    }
   },
 };
 

@@ -1,11 +1,15 @@
 <h1>Star Wars Movies</h1>
 
-<ul>
-  {{#each filmSummaries}}
-    <li>
-      <a href="/films/{{id}}">{{title}}</a>
-    </li>
-  {{/each}}
-</ul>
+<section>
+  <ul hx-target="#film-detail" hx-swap="innerHTML">
+    {{#each filmSummaries}}
+      <li>
+        <a href="/films/{{id}}" hx-get="/films/{{id}}" hx-push-url="true">{{title}}</a>
+      </li>
+    {{/each}}
+  </ul>
+</section>
 
-Selected Film: {{selectedFilm.title}}
+<section id="film-detail">
+  {{>film-detail}}
+</section>
