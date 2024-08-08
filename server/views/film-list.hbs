@@ -5,9 +5,7 @@
     {{#each filmSummaries}}
       <li>
         <a href="/films/{{id}}" hx-get="/films/{{id}}" hx-push-url="true">
-          {{#>ui-card}}
-            {{title}}
-          {{/ui-card}}
+          {{>film-card film=.}}
         </a>
       </li>
     {{/each}}
