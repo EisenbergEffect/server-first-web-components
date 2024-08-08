@@ -7,4 +7,4 @@ function defineHTMXElement(tag) {
   });
 }
 
-["test-element"].forEach(defineHTMXElement);
+[].forEach(defineHTMXElement);

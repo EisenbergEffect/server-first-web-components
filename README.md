@@ -1,4 +1,4 @@
-# Server-first Web Components Demo
+# Server-first Web Components with DSD and HTMX
 
 ## Machine Setup
 

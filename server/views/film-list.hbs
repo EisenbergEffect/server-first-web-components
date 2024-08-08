@@ -4,7 +4,11 @@
   <ul hx-target="#film-detail" hx-swap="innerHTML">
     {{#each filmSummaries}}
       <li>
-        <a href="/films/{{id}}" hx-get="/films/{{id}}" hx-push-url="true">{{title}}</a>
+        <a href="/films/{{id}}" hx-get="/films/{{id}}" hx-push-url="true">
+          {{#>ui-card}}
+            {{title}}
+          {{/ui-card}}
+        </a>
       </li>
     {{/each}}
   </ul>

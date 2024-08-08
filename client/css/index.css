@@ -1,0 +1,24 @@
+:root {
+  --spacing-base: .75rem;
+  --gap: var(--spacing-base);
+  --gap-small: calc(.5 * var(--gap));
+
+  --stroke-thicknessBase: .15rem;
+  --stroke-thicknessMinus1: calc(.5 * var(--stroke-thicknessBase));
+  --stroke-style: solid;
+
+  --typography-sizeBase: 1rem;
+  --typography-lineHeightBase: 1.3rem;
+  --typography-sizePlus1: 1.2rem;
+  --typography-lineHeightPlus1: 1.6rem;
+  --typography-sizePlus3: 1.75rem;
+  --typography-lineHeightPlus3: 2rem;
+  --typography-weightPlus1: 600;
+
+  --border-radius: .375rem;
+
+  --color-layerBorder: #d8d8d8;
+  --color-shadow: #00000033;
+
+  --shadow-raised:  0 .25rem 1rem var(--color-shadow);
+}
