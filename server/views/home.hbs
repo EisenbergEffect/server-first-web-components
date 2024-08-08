@@ -1,3 +1,9 @@
-<h1>Example App: Home</h1>
-{{>test-element greeting="Hello"}}
-{{>test-element greeting="Hola"}}
+<h1>Star Wars Movies</h1>
+
+<ul>
+  {{#each filmSummaries}}
+    <li>
+      <a href="/film/{{id}}">{{title}}</a>
+    </li>
+  {{/each}}
+</ul>
