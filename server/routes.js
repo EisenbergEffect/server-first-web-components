@@ -2,12 +2,17 @@ import filmSummaries from "./data/film-summaries.js";
 
 const routes = {
   "/": (req, res) => {
-    res.render("home", { filmSummaries });
+    const selectedFilm = filmSummaries[0];
+    const viewModel = { filmSummaries, selectedFilm };
+
+    res.render("film-list", viewModel);
   },
 
-  "/film/:id": (req, res) => {
-    const film = filmSummaries.find(x => x.id == req.params.id);
-    res.render("film", { film });
+  "/films/:id": (req, res) => {
+    const selectedFilm = filmSummaries.find(x => x.id == req.params.id);
+    const viewModel = { filmSummaries, selectedFilm };
+
+    res.render("film-list", viewModel);
   },
 };
 
