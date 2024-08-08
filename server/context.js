@@ -4,3 +4,4 @@ const als = new AsyncLocalStorage();
 
 export const getCurrentContext = () => als.getStore();
 export const runInNewContext = (callback) => als.run(new Map(), callback);
+export const contextMiddleware = (req, res, next) => runInNewContext(next);

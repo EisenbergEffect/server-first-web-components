@@ -22,4 +22,5 @@
 
 ### Client
 
+* W3C Standard [Web Components](https://bluespire.com/p/web-component-engineering)
 * [HTMX](https://htmx.org/)
