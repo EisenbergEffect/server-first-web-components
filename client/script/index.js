@@ -1,5 +1,5 @@
 import { FilmList } from "./film-list.js";
-import { configureHTMX } from "./htmx.js";
+import { DOM } from "./dom.js";
 
-configureHTMX();
-customElements.define("film-list", FilmList);
+DOM.configure();
+FilmList.define();

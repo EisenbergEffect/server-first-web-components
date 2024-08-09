@@ -1,10 +1,11 @@
-import { clearHTMXHistoryCache, processHTMX } from "./htmx.js";
+import { DOM } from "./dom.js";
 
 export class FilmList extends HTMLElement {
   #links;
 
   connectedCallback() {
-    processHTMX(this.shadowRoot);
+    DOM.applyBehaviors(this.shadowRoot);
+
     this.#links = Array.from(this.shadowRoot.querySelectorAll("a"));
     this.#links.forEach(x => x.addEventListener("click", () => setTimeout(this.selectActiveLink, 16)));
     this.selectActiveLink();
@@ -19,6 +20,10 @@ export class FilmList extends HTMLElement {
       }
     }
 
-    clearHTMXHistoryCache();
+    DOM.clearHistoryCache();
+  }
+
+  static define() {
+    customElements.define("film-list", this);
   }
 }

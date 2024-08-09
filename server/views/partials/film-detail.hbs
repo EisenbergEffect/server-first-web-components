@@ -2,6 +2,8 @@
   <template shadowrootmode="open">
     {{{shared-styles "./film-detail.css"}}}
     
-    Selected Film: {{film.title}}
+    <h2>{{film.title}}</h2>
+    <h3>Directive by {{film.director}}</h3>
+    <p>{{film.opening_crawl}}</p>
   </template>
 </film-detail>

@@ -82,3 +82,12 @@ html, body {
     --color-accent: AccentColor;
   }
 }
+
+h1 {
+  padding-inline-start: var(--gap);
+}
+
+.container {
+  display: flex;
+  gap: var(--gap);
+}

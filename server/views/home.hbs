@@ -1,9 +1,11 @@
-<h1>Star Wars Movies</h1>
+<h1>The Star Wars Saga</h1>
 
-<section>
-  {{>film-list}}
-</section>
+<div class="container">
+  <section id="film-list">
+    {{>film-list}}
+  </section>
 
-<section id="film-detail">
-  {{>film-detail film=selectedFilm}}
-</section>
+  <section id="film-detail">
+    {{>film-detail film=selectedFilm}}
+  </section>
+</div>

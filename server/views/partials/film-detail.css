@@ -2,5 +2,13 @@
   display: block;
   contain: content;
   box-sizing: border-box;
-  color: red;
+  padding: var(--gap);
+}
+
+h2, h3 {
+  margin: 0;
+}
+
+h2 {
+  color: var(--color-accent);
 }
