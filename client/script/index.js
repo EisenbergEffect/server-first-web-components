@@ -7,4 +7,4 @@ function defineHTMXElement(tag) {
   });
 }
 
-[].forEach(defineHTMXElement);
+["film-list"].forEach(defineHTMXElement);

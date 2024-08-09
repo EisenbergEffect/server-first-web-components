@@ -12,7 +12,7 @@ export default {
       res.render("partials/film-detail", viewModel);
     } else {
       const viewModel = { films: allFilms, selectedFilm: film };
-      res.render("film-list", viewModel);
+      res.render("home", viewModel);
     }
   },
 };
