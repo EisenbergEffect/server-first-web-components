@@ -1,10 +1,5 @@
-function defineHTMXElement(tag) {
-  customElements.define(tag, class extends HTMLElement {
-    constructor() {
-      super();
-      htmx.process(this.shadowRoot);
-    }
-  });
-}
+import { FilmList } from "./film-list.js";
+import { configureHTMX } from "./htmx.js";
 
-["film-list"].forEach(defineHTMXElement);
+configureHTMX();
+customElements.define("film-list", FilmList);

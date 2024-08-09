@@ -1,10 +1,27 @@
+:not(:defined) > template[shadowrootmode] ~ *  {
+  display: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
 :root {
+  --spacing-baseMinus3: calc(.25 * var(--spacing-base));
+  --spacing-baseMinus2: calc(.5 * var(--spacing-base));
   --spacing-base: .75rem;
   --gap: var(--spacing-base);
-  --gap-small: calc(.5 * var(--gap));
+  --gap-small: var(--spacing-baseMinus2);
 
-  --stroke-thicknessBase: .15rem;
   --stroke-thicknessMinus1: calc(.5 * var(--stroke-thicknessBase));
+  --stroke-thicknessBase: .15rem;
+  --stroke-thicknessPlus1: calc(2 * var(--stroke-thicknessBase));
   --stroke-style: solid;
 
   --typography-sizeBase: 1rem;
@@ -13,12 +30,55 @@
   --typography-lineHeightPlus1: 1.6rem;
   --typography-sizePlus3: 1.75rem;
   --typography-lineHeightPlus3: 2rem;
+  --typography-weight: normal;
   --typography-weightPlus1: 600;
+  --typography-fontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --typography-letterSpacing: .05rem;
 
   --border-radius: .375rem;
+  --border-pill: calc(4 * var(--border-radius));
+  --border-circle: 50%;
 
+  --shadow-cover: 0 0 .5rem var(--color-shadow);
+  --shadow-raised:  0 .25rem 1rem var(--color-shadow);
+
+  --elevation-cover: 1;
+  --elevation-raised: 10;
+
+  --form-controlHeight: 2rem;
+  --form-controlPadding: var(--spacing-baseMinus3);
+  --form-disabledControlOpacity: 50%;
+  --form-disabledControlCursor: not-allowed;
+
+  --motion-duration: 200ms;
+
+  --color-danger: #ff0000;
+  --color-accent: #008ed8;
+  --color-onAccent: #f4f4f4;
+  --color-layerBase: #f4f4f4;
+  --color-onLayerBase: #2c2c2c;
+  --color-layerPlus1: #f8f8f8;
+  --color-onLayerPlus1: #2c2c2c;
+  --color-layerPlus2: #eaeaea;
+  --color-onLayerPlus2: #2c2c2c;
+  --color-accentOnLayerPlus2: #00517b;
+  --color-layerPlus3: #ccc;
   --color-layerBorder: #d8d8d8;
   --color-shadow: #00000033;
+}
 
-  --shadow-raised:  0 .25rem 1rem var(--color-shadow);
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: 0s;
+  }
+}
+
+@media (forced-colors: active) {
+  :root {
+    --color-layerPlus2: Canvas;
+    --color-onLayerPlus2: CanvasText;
+    --color-layerBorder: ButtonBorder;
+    --color-accent: AccentColor;
+  }
 }

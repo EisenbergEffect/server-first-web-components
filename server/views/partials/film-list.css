@@ -2,4 +2,26 @@
   display: block;
   contain: content;
   box-sizing: border-box;
+  max-width: 300px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: var(--gap);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--color-onLayerBase);
+  text-decoration: none;
+}
+
+a.active {
+  --foreground: var(--color-onAccent);
+  --background: var(--color-accent);
 }

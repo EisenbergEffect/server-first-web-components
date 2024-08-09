@@ -1,0 +1,6 @@
+:host {
+  display: block;
+  contain: content;
+  box-sizing: border-box;
+  color: red;
+}

@@ -5,4 +5,6 @@
   box-shadow: var(--shadow-raised);
   border: var(--stroke-thicknessMinus1) var(--stroke-style) var(--color-layerBorder);
   border-radius: var(--border-radius);
+  background: var(--background, transparent);
+  color: var(--foreground, var(--color-onLayerBase));
 }

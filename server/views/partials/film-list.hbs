@@ -1,9 +1,11 @@
 <film-list>
   <template shadowrootmode="open">
-    <ul hx-target="global #film-detail" hx-swap="innerHTML">
+    {{{shared-styles "./film-list.css"}}}
+
+    <ul hx-boost="true" hx-target="global #film-detail">
       {{#each films}}
         <li>
-          <a href="/films/{{id}}" hx-get="/films/{{id}}" hx-push-url="true">
+          <a href="/films/{{id}}">
             {{>film-card film=.}}
           </a>
         </li>
