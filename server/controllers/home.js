@@ -1,10 +1,8 @@
-import filmSummaries from "../data/film-summaries.js";
+import films from "../data/films.js";
 
 export default {
   "/": (req, res) => {
-    const selectedFilm = filmSummaries[0];
-    const viewModel = { filmSummaries, selectedFilm };
-
+    const viewModel = { films, selectedFilm: films[0] };
     res.render("film-list", viewModel);
   }
 };

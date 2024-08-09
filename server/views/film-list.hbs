@@ -2,7 +2,7 @@
 
 <section>
   <ul hx-target="#film-detail" hx-swap="innerHTML">
-    {{#each filmSummaries}}
+    {{#each films}}
       <li>
         <a href="/films/{{id}}" hx-get="/films/{{id}}" hx-push-url="true">
           {{>film-card film=.}}
