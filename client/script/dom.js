@@ -5,6 +5,10 @@ export const DOM = Object.freeze({
     localStorage.removeItem('htmx-history-cache');
   },
 
+  onHistoryChange(callback) {
+    globalThis.addEventListener("htmx:pushedIntoHistory", callback);
+  },
+
   applyBehaviors(node) {
     htmx.process(node);
   },

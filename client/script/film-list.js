@@ -4,14 +4,15 @@ export class FilmList extends HTMLElement {
   #links;
 
   connectedCallback() {
-    DOM.applyBehaviors(this.shadowRoot);
-
     this.#links = Array.from(this.shadowRoot.querySelectorAll("a"));
-    this.#links.forEach(x => x.addEventListener("click", () => setTimeout(this.selectActiveLink, 16)));
-    this.selectActiveLink();
+
+    DOM.applyBehaviors(this.shadowRoot);
+    DOM.onHistoryChange(this.#selectActiveLink);
+
+    this.#selectActiveLink();
   }
 
-  selectActiveLink = () => {
+  #selectActiveLink = () => {
     for (const link of this.#links) {
       if (link.href.endsWith(location.pathname)) {
         link.classList.add("active");
