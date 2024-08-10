@@ -11,18 +11,6 @@ ui-card {
   flex-direction: column;
 }
 
-slot[name=thumbnail] {
-  display: block;
-  flex: 0 0 30%;
-}
-
-::slotted(img[slot=thumbnail]) {
-  max-width: 100%;
-  object-fit: cover;
-  aspect-ratio: 16/9;
-  height: 100%
-}
-
 [part=content] {
   padding-block: var(--gap-small);
   padding-inline: var(--gap);
