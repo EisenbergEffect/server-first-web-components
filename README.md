@@ -4,7 +4,7 @@ A demonstrating of leveraging common server rendering approaches to enable rende
 
 ## Machine Setup
 
-1. [Download and install Node.js LTS v20.16.0](https://nodejs.org/en/download/package-manager).
+1. [Download and install Node.js LTS v20.16.0](https://nodejs.org/en/download/package-manager) or higher.
 
 ## Repo Setup
 
@@ -30,3 +30,7 @@ A demonstrating of leveraging common server rendering approaches to enable rende
 
 * W3C Standard [Web Components](https://bluespire.com/p/web-component-engineering)
 * [HTMX](https://htmx.org/)
+
+### Data
+
+The data used in this demo was adapted from [SWAPI](https://swapi.dev/).
