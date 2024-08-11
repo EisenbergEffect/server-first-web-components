@@ -3,6 +3,7 @@
     "node_modules": true
   },
   "cSpell.words": [
-    "htmx"
+    "htmx",
+    "shadowrootmode"
   ]
 }
