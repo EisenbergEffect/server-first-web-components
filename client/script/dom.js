@@ -25,6 +25,10 @@ export const DOM = Object.freeze({
         attachShadowRoots(shadowRoot);
       });
     }
+
+    if (!HTMLTemplateElement.prototype.hasOwnProperty('shadowRootMode')) { 
+      attachShadowRoots(document);
+    }
     
     new MutationObserver((records) => {
       for (const record of records) {
@@ -34,6 +38,6 @@ export const DOM = Object.freeze({
           }
         }
       }
-    }).observe(document.body, { childList: true, subtree: true });
+    }).observe(document, { childList: true, subtree: true });
   }
 });
