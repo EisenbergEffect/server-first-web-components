@@ -1,6 +1,10 @@
-# Server-first Web Components with DSD and HTMX
+# Server-first Web Components with DSD, HTMX, and Islands
 
-A demonstrating of leveraging common server rendering approaches to enable rendering web components on the server, rather than on the client. This approach enables encapsulating HTML and CSS for each view, declaratively applying common behaviors to views via HTMX, and leveraging browser standards to add custom JavaScript behavior as needed to any part of the UI.
+A demo leveraging common server rendering approaches to enable rendering web components on the server, rather than on the client. This approach enables encapsulating HTML and CSS for each view, declaratively applying common behaviors to views via HTMX, and leveraging browser standards to add custom JavaScript islands as needed to any part of the UI.
+
+To learn more about Web Components, please consider purchasing [my Web Component Engineering course](https://bluespire.com/p/web-component-engineering). 13 modules, 170+ videos, and an interactive learning app guide you through DOM APIs, Web Components, modular CSS, accessibility, forms, design systems, tools, and more. Purchasing the course helps support my writing, web standards work, and open source.
+
+For group discounts, please reach out to sales@bluespire.com.
 
 ## Machine Setup
 
